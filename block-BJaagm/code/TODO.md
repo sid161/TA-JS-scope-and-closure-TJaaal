@@ -2,9 +2,10 @@
 thread of execution means the processes which takes place in javascript engine for execution
 
 2. Where the JavaScript code gets executed?
-global execution context
+javascript engine
 
 3. What does context means in Global Execution Context?
+context means environment where code gets executed
 
 4. When do you create a global execution context.
 each time when javascript program runs
