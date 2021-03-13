@@ -57,7 +57,7 @@ let username = 'John';
 if (true) {
   let username = 'Arya';
 }
-console.log(username); // already declared
+console.log(username); // John
 ```
 
 7. Go through the code below and write down the process of making decision about looking for the variable. Also write the output of the code below.
@@ -68,7 +68,7 @@ function sayHello() {
   let username = 'Arya';
 }
 sayHello();
-console.log(username); // already declared
+console.log(username); // John
 ```
 
 8. Go through the code below and write down the process of making decision about looking for the variable. Also write the output of the code below.
