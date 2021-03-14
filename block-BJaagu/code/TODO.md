@@ -1,15 +1,16 @@
 Find the output of the code snippets below:
 
 ```js
-console.log(numA + numB); //OUTPUT
+console.log(numA + numB); // 51
 var numA = 21,
   numB = 30;
+
 ```
 
 Find the output of the code snippets below:
 
 ```js
-console.log(numA + numB); //OUTPUT
+console.log(numA + numB); // variable already declared
 let numA = 21,
   numB = 30;
 ```
@@ -19,13 +20,13 @@ Find the output of the code snippets below:
 ```js
 let numA = 21,
   numB = 30;
-console.log(numA + numB); //OUTPUT
+console.log(numA + numB); 
 ```
 
 Find the output of the code snippets below:
 
 ```js
-console.log(sayHello()); // OUTPUT
+console.log(sayHello());  // Hello
 function sayHello() {
   console.log("Hey");
 }
@@ -38,7 +39,7 @@ Find the output of the code snippets below:
 
 ```js
 let username = "Tyrion";
-sayHello(); // OUTPUT
+sayHello(); // username already declare
 function sayHello() {
   console.log(username);
 }
@@ -47,7 +48,7 @@ function sayHello() {
 Find the output of the code snippets below:
 
 ```js
-sayHello(); // OUTPUT
+sayHello(); // 
 let username = "Tyrion";
 function sayHello() {
   console.log(username);
@@ -71,13 +72,13 @@ sayHello(); // OUTPUT
 let username = "Tyrion";
 let sayHello = () => {
   console.log(username);
-};
+}; // username already declare
 ```
 
 Find the output of the code snippets below:
 
 ```js
-sayHello(); // OUTPUT
+sayHello(); // Tyrion
 var username = "Tyrion";
 let sayHello = () => {
   console.log(username);
@@ -88,7 +89,7 @@ Find the output of the code snippets below:
 
 ```js
 var username = "Tyrion";
-sayHello(); // OUTPUT
+sayHello(); 
 let sayHello = () => {
   console.log(username);
 };
@@ -102,7 +103,7 @@ let sayHello = () => {
   console.log(username);
   var username = "John";
 };
-sayHello(); // OUTPUT
+sayHello(); // undefined
 ```
 
 Find the output of the code snippets below:
@@ -113,7 +114,7 @@ let sayHello = () => {
   var username = "John";
   console.log(username);
 };
-sayHello(); // OUTPUT
+sayHello(); // John
 ```
 
 Find the output of the code snippets below:
@@ -124,5 +125,5 @@ let sayHello = () => {
   console.log(username);
   let username = "John";
 };
-sayHello(); // OUTPUT
+sayHello(); // Cannot acess user befiore initialisation
 ```
