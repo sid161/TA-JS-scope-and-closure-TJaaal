@@ -1,7 +1,7 @@
 Find the output of the code snippets below:
 
 ```js
-console.log(numA + numB); // 51
+console.log(numA + numB); // NaN
 var numA = 21,
   numB = 30;
 
@@ -20,7 +20,7 @@ Find the output of the code snippets below:
 ```js
 let numA = 21,
   numB = 30;
-console.log(numA + numB); 
+console.log(numA + numB); // 51
 ```
 
 Find the output of the code snippets below:
@@ -39,7 +39,7 @@ Find the output of the code snippets below:
 
 ```js
 let username = "Tyrion";
-sayHello(); // username already declare
+sayHello(); // Tyrion
 function sayHello() {
   console.log(username);
 }
@@ -48,7 +48,7 @@ function sayHello() {
 Find the output of the code snippets below:
 
 ```js
-sayHello(); // 
+sayHello(); // username not present
 let username = "Tyrion";
 function sayHello() {
   console.log(username);
@@ -59,7 +59,7 @@ Find the output of the code snippets below:
 
 ```js
 let username = "Tyrion";
-sayHello(); // OUTPUT
+sayHello(); // error
 let sayHello = () => {
   console.log(username);
 };
