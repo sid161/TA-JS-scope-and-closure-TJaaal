@@ -1,4 +1,12 @@
 1. Create a function by your choice that accepts a callback function.
+function greet(name){
+  alert("Hey, " + name);    
+}
+function userInput(callback){ 
+  var name = prompt("Enter your name");
+  callback(name);
+}
+userInput(greet);
 
 2. Create a function by you choice that returns a function reference.
 
@@ -49,3 +57,5 @@ let odd = filter(numbers, function (n) {
 });
 console.log(odd); // [1,3,5,7,89]
 ```
+function filter(array,callback){
+}
