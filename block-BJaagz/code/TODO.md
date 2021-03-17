@@ -4,6 +4,10 @@
 - It does not return anything
 - It should work exactly like array `forEach` method
 
+function forEach(arr,cb) {
+  for(let i = 0;)
+}
+
 ```js
 function forEach() {}
 
@@ -33,8 +37,9 @@ map(['Sam', 'Jon', 'Arya'], (name) => name + name); // ['SamSam', 'JonJon', 'Ary
 - It should work exactly like array `filter` method
 
 ```js
-function filter() {
-  // Your code goes here
+function filter(arr,cb) {
+  
+
 }
 filter(['Sam', 'Jon', 'Arya'], (name) =>
   name.startsWith('S')
