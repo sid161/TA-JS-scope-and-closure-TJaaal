@@ -4,8 +4,8 @@
 
 ```js
 function outer(string){
-  function sayHello(){
-    alert ("Sid");
+  let sayHello = function(){
+    alert(str);
   }
   sayHello();
 }
@@ -14,14 +14,21 @@ function outer(string){
 2. Write a function `delay` that accepts two arguments, a callback and the wait for the time in milliseconds (1000 ms is 1 second). `delay` should return a function that, when invoked waits for the specified amount of time before executing. (Use setTimeout)
 
 ```js
-function delay)
+function delay(cb,ms){
+  return function(){
+    setTimeout(cb,ms);
+  }
+}
 ```
 
 3. Write a function with a closure. The first function should only take one argument, someone's last name, and return the inner function. The returned `inner` function should take one more argument, someone's first name. When inner function when called it should console.log both the first name and the last name with a space.
 
 ```js
-function lastName() {
-  //  Your code goes here
+function lastName(ln) {
+  return function(){
+    console.log($(fn) ${ln});
+  }
+  
 }
 
 let lastNameLee = lastName('lee'); // logs nothing
@@ -39,7 +46,18 @@ lastNameLee('Lynne'); //logs 'Lynne Lee'
 
 ```js
 function storyWriter() {
- 
+  let story = "";
+  return {
+    add: function(word){
+      story += word;
+      return story
+
+    },
+    erase: function(){
+      story = "";
+
+    }
+  }
 }
 
 // Test
@@ -61,8 +79,11 @@ When `forEach` function is called it returns another function. When the returned
 ```js
 function forEach(arr) {   
   let index = 0;
+  return function(){
+    return array[index++];
+  }
 }
-forEach() 
+ 
 
 let next = [1, 2, 3, 4, 5];
 next(); // 1
@@ -78,7 +99,10 @@ The returned function accepts a string `prefix` and returns `prefix` and `title`
 
 ```js
 function addDesignation(title) {
-  // your code goes here
+  return function(prefix){
+    return `${prefix} ${titile}`;
+    
+  }
 }
 
 let sales = addDesignation('Salesman');
@@ -96,8 +120,23 @@ manager('Head'); // Head Manager
 - `current` will return the current salary returns the updated salary
 
 ```js
-function changeSalary() {
-  // Your code goes here
+function changeSalary(currentSalary) {
+  let updatedSalary = "";
+  return{
+  raise: function(){
+    updatedSalary = currentSalary + 500;
+    return updatedSalary;
+  },
+  lower: function(){
+    updatedSalary = currentSalary - 500;
+    return updatedSalary;
+  },
+  current: function(){
+    updatedSalary = currentSalary;
+    return updatedSalary;
+  }
+  }
+  
 }
 
 let sam = changeSalary(2000);
@@ -114,7 +153,23 @@ arya.lower(); // 3500
 - `setLastName`: accepts a parameter last name using which updates the firstName and return the updated full name
 
 ```js
-// Your code goes here
+function nameFactory(fn,ln){
+  return {
+    getFullName() {
+      return `${fn} ${ln}`;
+    },
+    setFirstName(firstName) {
+      fn = firstName;
+      return `${fn} ${ln}`;
+
+    },
+    setLastName(lastName){
+      ln = lastName;
+      return `${fn} ${ln}`;
+    }
+  }
+
+}
 
 let arya = nameFactory('Arya', 'Stark');
 arya.getFullName(); // "Arya Stark"
@@ -127,8 +182,13 @@ arya.setLastName('Lannister'); // "Jon Lannister"
 The returned function accepts a string (children) and returns the children with the tag you passed.
 
 ```js
-function createTag() {
-  // your code goes here
+function createTag(tag) {
+  return function(child){
+    let elm = document.createElement(div);
+    elm.innerText = h3;
+    return elm
+  }
+
 }
 
 let bold = createTag('b');
