@@ -29,6 +29,7 @@ function fullName(a, b) {
 
 console.log(window.fullName(firstName, lastName));
 ```
+Arya Stark
 
 3. Make a Execution Context Diagram for the following JS and write the output.
 
@@ -156,7 +157,7 @@ sayHello();
 
 console.log(name);
 ```
-undefined
+not defined
 
 
 13. Guess the output of the code below with a reason.
@@ -381,3 +382,4 @@ let allFunctions = [
 
 // Answer is: 447
 ```
+allFunctions.reduce((acc,cv) => cv(acc),100)
