@@ -30,8 +30,10 @@ const final = name('Smith'); // final should be "Will Smith"
 
 ```js
 function isInBetween(a, b) {
-return function(){
-  if
+return function(c){
+  if(a>b){
+    c > b && c < a
+  }
 }
 }
 
@@ -46,7 +48,7 @@ isChild(103); // false
 ```js
 function letsWishThem(greeting) {
   return function(message){
-
+    return `${greeting} ${message};
   }
 
 }
@@ -81,7 +83,12 @@ cricket(); // Your score of Cricket is 2
 
 ```js
 function getCard(suit) {
-  // your code goes here
+  return function(){
+    let values = [2,3,4,5,6,7,8,9,10,J, Q, K, A];
+    function getRandomNumber(){
+      return Math.floor(Math.random() * values.length);
+    }
+  }
 }
 
 // Output
