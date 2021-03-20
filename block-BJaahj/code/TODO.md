@@ -4,7 +4,13 @@
 
 ```js
 function objOfMatches(array1, array2, callback) {
+  return array1.reduce((acc,cv,index) => {
+    if(array2[index] === callback(cv)){
+      acc[cv] = array2[index];
+    }
+    return acc;
 
+  },{})
 }
 
 // TEST
@@ -23,7 +29,12 @@ console.log(
 
 ```js
 function multiMap(arrVals, arrCallbacks) {
-  
+ return arrVals.reduce((acc,cv,index) => {
+   let valuesArray = allCallbacks.map(fn => fn(cv))
+
+   acc[cv] = valuesArray;
+   return acc;
+  },{})
 }
 
 // TEST
@@ -55,7 +66,15 @@ The final output from the third array will be matched agains the same indexed el
 
 ```js
 function objOfMatchesWithArray(array1, array2, callback) {
-  
+  return array1.reduce((ac,cv) => {
+    let val = callback.reduce((acc,cv) => fn(acc) 
+
+    if(val === array2[index]){
+      acc[cv] = array2[index];
+    }
+      return acc;
+
+  },{})
 }
 
 // TEST
@@ -87,7 +106,14 @@ To build the object, `objectWithArrayValues` will pass each value of the first a
 In the final object the key will be the value form the first array like `hi` and value will be an array of values returned from each function like `['HI', 'Hi', 'HiHi']`
 
 ```js
-function objOfMatchesWithArray(array1, array2, callback) {}
+function objOfMatchesWithArray(array1 , callback) {
+  return array1.reduce((acc,cv,index) => {
+    callback.map(fn => fn(cv));
+    return acc;
+
+  },{})
+
+}
 
 // TEST
 console.log(
